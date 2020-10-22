@@ -9,7 +9,7 @@ vendor
 wp-content/*
 wp-content/index.php
 !wp-content/mu-plugins/
-!wp-content/plugins/
+wp-content/plugins/
 !wp-content/themes/
 wp-content/themes/index.php
 wp-content/themes/twenty*
