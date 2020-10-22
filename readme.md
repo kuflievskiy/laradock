@@ -12,6 +12,10 @@ mkdir wordpress.local
 ```
 
 ## 2 - Enter the laradock folder and rename env-example to .env. or customize the .env file laradock/.env
+### use our .env sample file
+cp .env-example laradock/.env
+### or modify the original one
+cp laradock/env-example laradock/.env
 - Workspace (Laradock container that includes a rich set of pre-configured useful tools)
 - Mysql
 - Apache
