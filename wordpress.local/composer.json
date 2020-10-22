@@ -1,0 +1,49 @@
+{
+  "name": "kuflievskiy/laradock-wordpress",
+  "description": "Test WordPress",
+  "keywords": [
+    "WordPress",
+    "Laradock"
+  ],
+  "authors": [
+    {
+      "name": "Contributors",
+      "homepage": "https://github.com/kuflievskiy/laradock/graphs/contributors"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/woocommerce":"4.6.1",
+    "wpackagist-plugin/facebook-for-woocommerce":"2.0.5",
+    "wpackagist-plugin/mailchimp-for-woocommerce":"2.4.7"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "wp-coding-standards/wpcs": "*",
+    "phpstan/phpstan": "*",
+    "phpmd/phpmd": "*",
+    "phploc/phploc": "*",
+    "sebastian/phpcpd": "*",
+    "phpcompatibility/php-compatibility": "dev-master"
+  },
+  "support": {
+    "issues": "https://github.com/kuflievskiy/laradock/issues"
+  }
+}
