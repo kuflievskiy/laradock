@@ -16,3 +16,9 @@ composer update
 
 ### To update only Drupal core without any modules or themes, use
 composer update drupal/core-recommended --with-dependencies
+
+# Drush Commandline Tool 10.3.6-dev
+composer require --dev drush/drush
+./vendor/drush/drush/drush --version
+./vendor/drush/drush/drush cr
+
