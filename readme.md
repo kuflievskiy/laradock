@@ -27,16 +27,16 @@ mkdir wordpress.local
 cp laradock-example/.env laradock/.env
 
 # "apache" container
-cp laradock-example/apache2/sites/drupal.local.conf laradock-example/apache2/sites/drupal.local.conf
-cp laradock-example/apache2/sites/wordpress.local.conf laradock-example/apache2/sites/wordpress.local.conf
+cp laradock-example/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
+cp laradock-example/apache2/sites/wordpress.local.conf laradock/apache2/sites/wordpress.local.conf
 
 # "nginx" container
-cp laradock-example/nginx/sites/drupal.local.conf laradock-example/nginx/sites/drupal.local.conf
-cp laradock-example/nginx/sites/wordpress.local.conf laradock-example/nginx/sites/wordpress.local.conf
+cp laradock-example/nginx/sites/drupal.local.conf laradock/nginx/sites/drupal.local.conf
+cp laradock-example/nginx/sites/wordpress.local.conf laradock/nginx/sites/wordpress.local.conf
 
 # "mysql" container
-cp laradock-example/mysql/docker-entrypoint-initdb.d/drupal.local.sql laradock-example/mysql/docker-entrypoint-initdb.d/drupal.local.sql
-cp laradock-example/mysql/docker-entrypoint-initdb.d/wordpress.local.sql laradock-example/mysql/docker-entrypoint-initdb.d/wordpress.local.sql
+cp laradock-example/mysql/docker-entrypoint-initdb.d/drupal.local.sql laradock/mysql/docker-entrypoint-initdb.d/drupal.local.sql
+cp laradock-example/mysql/docker-entrypoint-initdb.d/wordpress.local.sql laradock/mysql/docker-entrypoint-initdb.d/wordpress.local.sql
 ```
 
 
