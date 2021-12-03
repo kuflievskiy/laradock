@@ -7,6 +7,11 @@
 mkdir laradock
 cd laradock
 git clone https://github.com/laradock/laradock.git .
+
+# Cloning a Project with Submodules
+# https://git-scm.com/book/en/v2/Git-Tools-Submodules#
+git submodule update --init
+
 mkdir drupal.local
 mkdir wordpress.local
 ```
@@ -50,9 +55,9 @@ laradock/workspace/xdebug.ini
 # https://docs.docker.com/compose/reference/down/
 # docker-compose down
 
-### docker-compose up -d nginx mysql phpmyadmin redis workspace 
-docker-compose up -d nginx mysql phpmyadmin workspace php-fpm
-docker-compose up -d apache2 mysql phpmyadmin workspace php-fpm
+docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d nginx mysql phpmyadmin workspace php-fpm
+docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apache2 mysql phpmyadmin workspace php-fpm
+
 ```
 
 ## 4 - Add hosts on your local machine
