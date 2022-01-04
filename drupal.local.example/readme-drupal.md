@@ -9,6 +9,8 @@ cp drupal.local.example/laradock/.env laradock/.env
 ####
 cp drupal.local.example/laradock/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
 ####
+cp drupal.local.example/laradock/mysql/my.cnf laradock/mysql/my.cnf
+####
 docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apache2 mysql phpmyadmin workspace php-fpm
 ####
 docker exec -it laradock_workspace_1 bash
@@ -16,6 +18,10 @@ docker exec -it laradock_workspace_1 bash
 rm -rf drupal.local
 ####
 composer create-project drupal/recommended-project drupal.local -n
+
+#### https://www.drupal.org/project/search_api/releases/8.x-1.21
+#composer require 'drupal/search_api:^1.21'
+
 ####
 cp drupal.local.example/drupal.local/web/sites/settings.local.php drupal.local/web/sites/settings.local.php
 ####
