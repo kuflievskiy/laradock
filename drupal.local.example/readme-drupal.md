@@ -1,10 +1,15 @@
+# Clone the project code
+git clone https://github.com/kuflievskiy/laradock EducationProject
+# Pull the Laradock code as submodule
+git submodule update --init --recursive
 # Remove all the existing containers, images, volumes
 sudo docker rm $(sudo docker stop $(sudo docker ps -a -q)) && sudo docker rmi $(sudo docker images -q) && sudo docker volume rm $(sudo docker volume ls -q)
+#
+cp drupal.local.example/laradock/.env laradock/.env
 #
 cp drupal.local.example/laradock/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
 #
 docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apache2 mysql phpmyadmin workspace php-fpm
-
 #
 docker exec -it laradock_workspace_1 bash
 #
