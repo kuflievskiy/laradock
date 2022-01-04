@@ -1,5 +1,5 @@
 .idea/
-laradock/
+/laradock/
 vendor/
 node_modules/
 
