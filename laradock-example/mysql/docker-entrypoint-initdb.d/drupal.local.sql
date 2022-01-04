@@ -1,4 +1,0 @@
-CREATE USER 'drupal'@'%' IDENTIFIED BY 'drupal_secret';
-CREATE DATABASE drupal;
-GRANT ALL PRIVILEGES ON  `drupal`.* TO  'drupal'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
