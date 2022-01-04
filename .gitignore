@@ -1,19 +1,7 @@
 .idea/
-
-# Common
-!laradock/.env
-
-# apache2
-!laradock/apache2/sites/drupal.local.conf
-!laradock/apache2/sites/wordpress.local.conf
-
-# mysql
-!laradock/nginx/sites/drupal.local.conf
-!laradock/nginx/sites/wordpress.local.conf
-
-# mysql
-!laradock/mysql/docker-entrypoint-initdb.d/wordpress.local.sql
-!laradock/mysql/docker-entrypoint-initdb.d/drupal.local.sql
-
+/laradock/
 vendor/
 node_modules/
+
+/composer.json
+/composer.lock
