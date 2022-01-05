@@ -22,6 +22,11 @@ cp drupal.local.example/laradock/.env laradock/.env
 ```
 cp drupal.local.example/laradock/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
 ```
+#### Setup local hosts "drupal.local www.drupal.local"
+```
+sudo vim /etc/hosts
+127.0.0.1 drupal.local www.drupal.local
+```
 #### Copy MySQL config file my.cnf
 ```
 cp drupal.local.example/laradock/mysql/my.cnf laradock/mysql/my.cnf
