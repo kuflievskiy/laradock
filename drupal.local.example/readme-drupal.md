@@ -52,7 +52,7 @@ composer require 'drupal/search_api:^1.21'
 ```
 ####
 ```
-cp drupal.local.example/drupal.local/web/sites/settings.local.php drupal.local/web/sites/settings.local.php
+cp drupal.local.example/drupal.local/web/sites/default/settings.local.php drupal.local/web/sites/default/settings.local.php
 ```
 ####
 ```
