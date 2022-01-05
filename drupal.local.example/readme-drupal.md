@@ -89,3 +89,10 @@ composer require "drush/drush" -n
 ```
 ./vendor/drush/drush/drush cron
 ```
+
+#### Laradock-speific question. Resolved "Changes not staged for commit"
+#### modified:   laradock (modified content)
+#### Temporary disable .git inside "laradock" folder
+```
+mv ./laradock/.git ./laradock/_git
+```
