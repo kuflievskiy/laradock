@@ -4,19 +4,19 @@ git clone https://github.com/kuflievskiy/laradock EducationProject
 git submodule update --init --recursive
 #### Remove all the existing containers, images, volumes
 sudo docker rm $(sudo docker stop $(sudo docker ps -a -q)) && sudo docker rmi $(sudo docker images -q) && sudo docker volume rm $(sudo docker volume ls -q)
-####
-cp drupal.local.example/laradock/.env laradock/.env
-####
-cp drupal.local.example/laradock/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
-####
-cp drupal.local.example/laradock/mysql/my.cnf laradock/mysql/my.cnf
-####
-docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apache2 mysql phpmyadmin workspace php-fpm
-####
-docker exec -it laradock_workspace_1 bash
-####
+#### Remove the existing drupal.local folder, let's create the site from scratch
 rm -rf drupal.local
-####
+#### Copy Laradock .env configuration
+cp drupal.local.example/laradock/.env laradock/.env
+#### Copy Apache drupal.local.conf
+cp drupal.local.example/laradock/apache2/sites/drupal.local.conf laradock/apache2/sites/drupal.local.conf
+#### Copy MySQL config file my.cnf
+cp drupal.local.example/laradock/mysql/my.cnf laradock/mysql/my.cnf
+#### Build & run the containers in the detach mode
+docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apache2 mysql workspace php-fpm
+#### Login inside the 'workspace' container in order to install and configure Drupal
+docker exec -it laradock_workspace_1 bash
+#### Install Drupal via PHP composer
 composer create-project drupal/recommended-project drupal.local -n
 
 #### https://www.drupal.org/project/search_api/releases/8.x-1.21
