@@ -4,6 +4,7 @@ git clone https://github.com/kuflievskiy/laradock EducationProject
 ```
 #### Pull the Laradock code as submodule
 ```
+git submodule add https://github.com/Laradock/laradock.git
 git submodule update --init --recursive
 ```
 #### Remove all the existing containers, images, volumes
