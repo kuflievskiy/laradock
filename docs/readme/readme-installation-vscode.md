@@ -1,7 +1,5 @@
 #### VS Code configuration and all steps to install/make this work
 
-Generally, dev site setup process is present in GitHub Workflow: .github/workflows/push.yml and also documented in docs/readme/readme-installation.md
-
 This part of the documentation contains the note on how to work with dev site copy locally if you're using "VS Code" IDE. 
 
 VS Code has its own .devcontainer config folder and we configured it the same way as we did in GitHub Workflows.
