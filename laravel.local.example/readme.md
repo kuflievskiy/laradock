@@ -50,7 +50,7 @@ vim laradock/.env
 # WORKSPACE_INSTALL_DRUSH=drush
 # WORKSPACE_DRUSH_VERSION=8.1.17
 # WORKSPACE_INSTALL_WP_CLI=true
-# PHP_VERSION=7.4
+# PHP_VERSION=8.1
 
 # on Ubuntu, when local UID is different from 1000
 WORKSPACE_PUID=1001
@@ -72,7 +72,7 @@ docker-compose --env-file laradock/.env -f laradock/docker-compose.yml up -d apa
 
 #### Login inside the 'workspace' container in order to install files
 ```
-docker exec -it laradock_workspace_1 bash
+docker exec -it laradock-workspace-1 bash
 ```
 
 #### Install 
